@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Realtime Market & News Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-bar">
+        <div>
+          <p class="kicker">Live Intelligence</p>
+          <h1>Realtime Market & News Dashboard</h1>
+        </div>
+        <div class="status">
+          <span class="dot"></span>
+          <div>
+            <p class="status-label">Live</p>
+            <p class="status-time" id="statusTime"></p>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="primary">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Realtime stock market news</h2>
+              <button id="refreshMarkets" class="ghost-button">Refresh</button>
+            </div>
+            <div id="marketNews" class="news-list"></div>
+          </div>
+
+          <div class="grid">
+            <div class="panel">
+              <div class="panel-header">
+                <h2>Popular daily headlines</h2>
+                <button id="refreshHeadlines" class="ghost-button">Shuffle</button>
+              </div>
+              <div id="headlineNews" class="headline-list"></div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-header">
+                <h2>Market pulse</h2>
+              </div>
+              <div class="market-pulse" id="marketPulse"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Live sports scores</h2>
+              <button id="refreshScores" class="ghost-button">Update</button>
+            </div>
+            <div id="sportsScores" class="score-list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Breaking alerts</h2>
+            </div>
+            <div id="alerts" class="alert-list"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <footer class="ticker">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
