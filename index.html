@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Market & News Command Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Realtime news & data feed</p>
+        <h1>MarketPulse Live Dashboard</h1>
+        <p class="subhead">Streaming market headlines, sports scores, and the day's biggest stories in one command center.</p>
+      </div>
+      <div class="status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div>
+          <p class="status-label">Live feed</p>
+          <p class="status-time" id="liveTime">Updating...</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel" aria-live="polite">
+        <div class="panel-header">
+          <h2>Realtime stock market news</h2>
+          <span class="badge">Breaking</span>
+        </div>
+        <ul class="feed" id="marketFeed"></ul>
+      </section>
+
+      <section class="panel" aria-live="polite">
+        <div class="panel-header">
+          <h2>Popular daily headlines</h2>
+          <span class="badge badge-secondary">Trending</span>
+        </div>
+        <ul class="feed" id="headlineFeed"></ul>
+      </section>
+
+      <aside class="panel sports" aria-live="polite">
+        <div class="panel-header">
+          <h2>Live sports scores</h2>
+          <span class="badge badge-accent">In play</span>
+        </div>
+        <ul class="scores" id="sportsScores"></ul>
+        <div class="sports-footer">
+          <p>Auto-refreshes every 20 seconds.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div class="ticker" aria-live="polite">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
